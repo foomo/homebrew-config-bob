@@ -3,10 +3,10 @@ class ConfigBob < Formula
   homepage "https://github.com/foomo/config-bob"
   url "https://github.com/foomo/config-bob/releases/download/0.3.3/config-bob_0.3.3_darwin_amd64.tar.gz"
   version "0.3.3"
-  sha256 "6dea5287f97b0ca1b32771641cc51c9472f5b65de2657b455415565ca1a42b96"
+  sha256 "946ffa6281dd9a051b726984ec166d21082eec7078162b7650ef044624ab51e6"
 
   def install
-    bin.install "gotsrpc"
+    bin.install "config-bob"
   end
 
   def caveats
