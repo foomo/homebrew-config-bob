@@ -2,16 +2,16 @@
 class ConfigBob < Formula
   desc "CLI utility to generate secure configurations"
   homepage "https://github.com/foomo/config-bob"
-  version "0.6.0"
+  version "0.6.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/foomo/config-bob/releases/download/0.6.0/config-bob_0.6.0_darwin_amd64.tar.gz"
-    sha256 "25ab27f1ca56b6721b8527749dcd4478032fcf112418cc6ae22f128e19a79031"
+    url "https://github.com/foomo/config-bob/releases/download/0.6.1/config-bob_0.6.1_darwin_amd64.tar.gz"
+    sha256 "b8ad22330f9bf7950acf962fb49d475f49de3a7fb96e8cae7d3993e992bb4509"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/config-bob/releases/download/0.6.0/config-bob_0.6.0_linux_amd64.tar.gz"
-      sha256 "3a8f90406ef5cf35f4942c550142f720a11076ff03aa1d04e29b97fe450f390d"
+      url "https://github.com/foomo/config-bob/releases/download/0.6.1/config-bob_0.6.1_linux_amd64.tar.gz"
+      sha256 "e7b163e4a057eada57832853e63865ae46e1b8c4aab403c81871d98e1a6cb7d2"
     end
   end
 
