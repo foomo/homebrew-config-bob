@@ -3,7 +3,6 @@ class ConfigBob < Formula
   desc "CLI utility to generate secure configurations"
   homepage "https://github.com/foomo/config-bob"
   version "0.6.2"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/foomo/config-bob/releases/download/0.6.2/config-bob_0.6.2_darwin_amd64.tar.gz"
