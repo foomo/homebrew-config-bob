@@ -5,11 +5,11 @@
 class ConfigBob < Formula
   desc "CLI utility to generate secure configurations"
   homepage "https://github.com/foomo/config-bob"
-  version "0.7.2"
+  version "0.7.4"
 
   on_macos do
-    url "https://github.com/foomo/config-bob/releases/download/0.7.2/config-bob_0.7.2_darwin_amd64.tar.gz"
-    sha256 "7c3921197bc9c75d5abc945b0984a2e80e25aeb1d6329853195e11c07e2feaa3"
+    url "https://github.com/foomo/config-bob/releases/download/0.7.4/config-bob_0.7.4_darwin_amd64.tar.gz"
+    sha256 "9966ba32c0f9d1cd9d54524f304da66e5de0dcd39081f891f9e33e476fa1aaad"
 
     def install
       bin.install "config-bob"
@@ -28,8 +28,8 @@ class ConfigBob < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/config-bob/releases/download/0.7.2/config-bob_0.7.2_linux_amd64.tar.gz"
-      sha256 "5b1fa0ad5f53f7da4a1efd7b33adb871ed38df27d34753ec2211992ca177a47f"
+      url "https://github.com/foomo/config-bob/releases/download/0.7.4/config-bob_0.7.4_linux_amd64.tar.gz"
+      sha256 "0f11e85c121f70129776ea2f3a591c73c628a2e72428941642f19f4b1d5a78e4"
 
       def install
         bin.install "config-bob"
