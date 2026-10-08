@@ -5,39 +5,33 @@
 class ConfigBob < Formula
   desc "CLI utility to generate secure configurations"
   homepage "https://github.com/foomo/config-bob"
-  version "0.8.1"
+  version "0.7.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/config-bob/releases/download/v0.8.1/config-bob_0.8.1_darwin_amd64.tar.gz"
-      sha256 "d10d910b427dec7ec289f86ecdd5ec4ca1061d88da7db8335c5d0c74a459b26d"
+    url "https://github.com/foomo/config-bob/releases/download/0.7.4/config-bob_0.7.4_darwin_amd64.tar.gz"
+    sha256 "9966ba32c0f9d1cd9d54524f304da66e5de0dcd39081f891f9e33e476fa1aaad"
 
-      define_method(:install) do
-        bin.install "config-bob"
-      end
+    def install
+      bin.install "config-bob"
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/foomo/config-bob/releases/download/v0.8.1/config-bob_0.8.1_darwin_arm64.tar.gz"
-      sha256 "4554f80655e26a9498c0085ed3f052b393e4bc1fc640b96977a906ded01f090c"
 
-      define_method(:install) do
-        bin.install "config-bob"
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the ConfigBob
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/config-bob/releases/download/v0.8.1/config-bob_0.8.1_linux_amd64.tar.gz"
-      sha256 "be06ce7a02a273fe9e4ff608ce5ca0cc1df5d189ed5f3d9012d418a584b5c81f"
-      define_method(:install) do
-        bin.install "config-bob"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/config-bob/releases/download/v0.8.1/config-bob_0.8.1_linux_arm64.tar.gz"
-      sha256 "af50544cbc3b6689cd425780bae5f38a8b15394acc7fd1266fc0d7efbf8d2dbb"
-      define_method(:install) do
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/config-bob/releases/download/0.7.4/config-bob_0.7.4_linux_amd64.tar.gz"
+      sha256 "0f11e85c121f70129776ea2f3a591c73c628a2e72428941642f19f4b1d5a78e4"
+
+      def install
         bin.install "config-bob"
       end
     end
